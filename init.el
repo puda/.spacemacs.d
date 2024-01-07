@@ -570,6 +570,42 @@ before packages are loaded."
   (setq scroll-margin 4)
   (setq dotspacemacs-line-numbers 'relative)
   (setq-default evil-escape-key-sequence "jk")
+
+  ;; vertigo
+  (load-file "~/.spacemacs.d/plugins/vertigo/vertigo.el")
+
+  (define-key evil-normal-state-map (kbd "gj") 'vertigo-jump-down)
+  (define-key evil-normal-state-map (kbd "gk") 'vertigo-jump-up)
+
+  ;; delete motion
+  ;; (define-key evil-normal-state-map (kbd "gj") 'vertigo-jump-down)
+  ;; (define-key evil-normal-state-map (kbd "gk") 'vertigo-jump-up)
+
+  ;; delete up to a line
+  ;;   (evil-define-motion vertigo-evil-down (count)
+  ;;     "Evil vertigo motion. Count has no effect."
+  ;;     (vertigo-jump-down))
+
+  ;;   delete up to and including a line
+  ;;   (evil-define-motion vertigo-evil-down (count)
+  ;;     "Evil vertigo motion. Count has no effect."
+  ;;     (vertigo-jump-down)
+  ;;     (forward-line))
+
+  ;; Harpoon
+  (load-file "~/.spacemacs.d/plugins/harpoon/harpoon.el")
+
+  ;; You can use this hydra menu that have all the commands
+  ;; (evil-normal-state-map kbd( "j SPC" ) 'harpoon-quick-menu-hydra)
+  ;; (evil-normal-state-map kbd( "aa" ) 'harpoon-add-file)
+
+  ;; And the vanilla commands
+  ;; (evil-normal-state-map kbd( "jc" ) 'harpoon-clear)
+  ;; (evil-normal-state-map kbd( "jf" ) 'harpoon-toggle-file)
+  ;; (evil-normal-state-map kbd( "jf" ) 'harpoon-go-to-1)
+  ;; (evil-normal-state-map kbd( "jd" ) 'harpoon-go-to-2)
+  ;; (evil-normal-state-map kbd( "js" ) 'harpoon-go-to-3)
+  ;; (evil-normal-state-map kbd( "ja" ) 'harpoon-go-to-4)
 )
 
 
